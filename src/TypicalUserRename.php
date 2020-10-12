@@ -50,6 +50,7 @@ class TypicalUserRename implements Invoker
 
     /**
      * @param array $arguments
+     * @return array
      */
     public function __invoke(array $arguments = [])
     {
@@ -70,6 +71,8 @@ class TypicalUserRename implements Invoker
             $this->profiler->profile(sprintf('Error in renaming: %s', json_encode($response)));
             throw new RuntimeException(sprintf('Error in renaming process for %s accounts', count($response)));
         }
+
+        return $logins;
     }
 
     /**
