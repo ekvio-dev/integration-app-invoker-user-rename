@@ -60,15 +60,15 @@ class TypicalUserRename implements Invoker
         $logins = $this->userMatcher->match($users);
         $this->profiler->profile(sprintf('Matched to %s renames...', count($logins)));
 
-        if($logins) {
+        if(!$logins) {
+            $this->profiler->profile('Logins for rename not found...');
+        }
 
-            $this->profiler->profile(sprintf('Begin renaming %s accounts...', count($logins)));
-            $response = $this->userApi->rename($logins);
-            if($response) {
-                $this->profiler->profile(sprintf('Error in renaming: %s', json_encode($response)));
-
-                throw new RuntimeException(sprintf('Error in renaming process for %s accounts', count($response)));
-            }
+        $this->profiler->profile(sprintf('Begin renaming %s accounts...', count($logins)));
+        $response = $this->userApi->rename($logins);
+        if($response) {
+            $this->profiler->profile(sprintf('Error in renaming: %s', json_encode($response)));
+            throw new RuntimeException(sprintf('Error in renaming process for %s accounts', count($response)));
         }
     }
 
