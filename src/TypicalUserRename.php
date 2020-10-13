@@ -63,6 +63,7 @@ class TypicalUserRename implements Invoker
 
         if(!$logins) {
             $this->profiler->profile('Logins for rename not found...');
+            return [];
         }
 
         $this->profiler->profile(sprintf('Begin renaming %s accounts...', count($logins)));
