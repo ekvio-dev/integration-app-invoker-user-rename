@@ -1,2 +1,2 @@
-# Typicak user rename invoker
+# Typical user rename invoker
 

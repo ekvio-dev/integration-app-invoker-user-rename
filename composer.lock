@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e0a60c81bfb0ffbae2f377d2030ae29",
+    "content-hash": "21722a6705d16a09f5658cd0789c2bf0",
     "packages": [
         {
             "name": "ekvio-dev/integration-app-contracts",
@@ -44,16 +44,16 @@
         },
         {
             "name": "ekvio-dev/integration-php-sdk",
-            "version": "v2.x-dev",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ekvio-dev/integration-php-sdk.git",
-                "reference": "2f41a9b493f85a4a7aafc76eaa4685f76a74792a"
+                "reference": "2111f2045e66a3e016b4db719caf2ab4a12ea8eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ekvio-dev/integration-php-sdk/zipball/2f41a9b493f85a4a7aafc76eaa4685f76a74792a",
-                "reference": "2f41a9b493f85a4a7aafc76eaa4685f76a74792a",
+                "url": "https://api.github.com/repos/ekvio-dev/integration-php-sdk/zipball/2111f2045e66a3e016b4db719caf2ab4a12ea8eb",
+                "reference": "2111f2045e66a3e016b4db719caf2ab4a12ea8eb",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 }
             ],
             "description": "Ekvio integration PHP SDK",
-            "time": "2020-10-09T10:34:00+00:00"
+            "time": "2020-11-17T07:55:28+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2407,12 +2407,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "ekvio-dev/integration-php-sdk": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-json": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }
